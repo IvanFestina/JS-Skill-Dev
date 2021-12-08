@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Изучаем DOM</title>
+</head>
+<body>
+ <h1 id="main-heading">Привет, мир!</h1>
+<h1 id="slide">Здесь могла бы быть ваша реклама, но она поехала.</h1>
+
+<h2>Текст поменьше, а Катя смотрит Хауса</h2>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  <script>
+
+    $("h1").fadeOut(2000).delay(5000).fadeIn(2000);
+    $("h2").fadeTo(5000, 0.5);
+    /*var newHeadingText = prompt("Введите новый заголовок:");
+    $("#main-heading").text(newHeadingText)
+    $("body").append("<p>Это новый параграф</p>");
+    $("#slide").slideUp(5000).slideDown(5000);
+    $("#main-heading").text("Этот текст скоро исчезнет").fadeOut(10000).fadeIn(8000);
+*/
+/*var fadeTime;
+    for (var i = 0; i < 5; i++) {
+      fadeTime = (i + 1) * 1000;
+      $("#main-heading").fadeOut(fadeTime/2).fadeIn(fadeTime/2);
+    }
+    $("h1").fadeOut(1000);
+    $("h1").fadeIn(1000) */
+
+    /*for (var i = 0; i < 3; i++) {
+      var hobby = prompt("Назови одно из своих хобби!");
+      $("body").append("<p>" + hobby + "</p>");
+    }
+    $("h1").fadeOut(10000)*/
+  </script>
+
+
+
+
+</body>
+</html>

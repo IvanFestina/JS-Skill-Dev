@@ -1,0 +1,141 @@
+Фукнции
+
+var ourFirstFunction = function () {
+    console.log("Привет, мир!");
+};
+
+ourFirstFunction()
+VM320:2 Привет, мир!
+undefined
+var sayHelloTo = function (name) {
+    console.log("Привет, " + name + "!");
+};
+undefined
+sayHelloTo("Ник");
+VM579:2 Привет, Ник!
+undefined
+var drawCats = function (howManyTimes) {
+    for (var i = 0; i < howManyTimes; i++) {
+        console.log(i + " =^.^=");
+    }
+};
+undefined
+drawCats(5)
+VM952:3 0 =^.^=
+VM952:3 1 =^.^=
+VM952:3 2 =^.^=
+VM952:3 3 =^.^=
+VM952:3 4 =^.^=
+undefined
+var printMultipleTimes = function (howManyTimes, whatToDraw) {
+    for (var i = 0; i < howManyTimes; i++) {
+        console.log(i + " " + whatToDraw);
+    }
+};
+undefined
+printMultipleTimes(5, "убейся об стену");
+VM1453:3 0 убейся об стену
+VM1453:3 1 убейся об стену
+VM1453:3 2 убейся об стену
+VM1453:3 3 убейся об стену
+VM1453:3 4 убейся об стену
+undefined
+
+var triple = function(number) {
+    console.log(number * 2);
+};
+undefined
+triple(5)
+VM2088:2 10
+undefined
+var triple = function(number) {
+    console.log(number * 3);
+};
+undefined
+double(5) + double(3)
+16
+double(double(3));
+12
+
+var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"];
+pickRandomWord(randomWords);
+'Червяк'
+var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"];
+pickRandomWord(randomWords);
+'Планета'
+var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"];
+pickRandomWord(randomWords);
+'Червяк'
+pickRandomWord(["Чарли", "Радж", "Николь", "Кейт", "Сэнди"]);
+
+'Сэнди'
+var randomBodyParts = ["глаз", "нос", "череп"];
+var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+// Соединяем случайные строки в предложение:
+var randomString = "У тебя " + pickRandomWord(randomBodyParts) + " словно " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+randomString
+'У тебя глаз словно дурацкая мартышка!!!'
+randomString
+'У тебя глаз словно дурацкая мартышка!!!'
+randomString
+'У тебя глаз словно дурацкая мартышка!!!'
+
+
+var pickRandomWord = function (words) {
+    return words [Math.floor(Math.random() * words.length)];
+};
+
+
+var generateRandomInsult = function () {
+ var randomBodyParts = ["глаз", "нос", "череп"];
+ var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+ var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"]
+  var randomString = "У тебя " + pickRandomWord(randomBodyParts) + " слово " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+    return randomString;
+ };
+
+
+var medalForScore = function (score) {
+    if (score < 3) {
+        return "Бронзовая";
+   }if (score < 7) {
+        return "Серебряная";
+   }  return "Золотая";
+};
+    
+undefined
+medalForScore(4)
+'Серебряная'
+
+
+
+var add = function (a, b) {
+  return a + b;
+};
+
+var multiply = function (a, b) {
+  return a * b;
+};
+
+add(multiply(36325, 9824), 777);
+// 356857577
+
+
+var areArraysSame = function (arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+undefined
+areArraysSame([1, 2, 3], [1, 2, 3]);
+
+true

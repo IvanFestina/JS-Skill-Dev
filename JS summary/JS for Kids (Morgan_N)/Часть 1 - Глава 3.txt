@@ -1,0 +1,302 @@
+МАССИВЫ
+
+var myTopThreeDinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр"];
+
+undefined
+myTopThreeDinosaurs
+(3) ['Тираннозавр', 'Велоцираптор', 'Стегозавр']
+
+var myTopThreeDinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр"];
+
+var dinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр", "Трицератопс", "Брахиозавр", "Птеранодон", "Апатозавра", "Диплодок", "Компсогнат"];
+undefined
+var dinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр", "Трицератопс", "Брахиозавр", "Птеранодон", "Апатозавра", "Диплодок", "Компсогнат"];
+var dinosaurs
+undefined
+var dinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр", "Трицератопс", "Брахиозавр", "Птеранодон", "Апатозавра", "Диплодок", "Компсогнат"];
+undefined
+dinosaurs
+(9) ['Тираннозавр', 'Велоцираптор', 'Стегозавр', 'Трицератопс', 'Брахиозавр', 'Птеранодон', 'Апатозавра', 'Диплодок', 'Компсогнат']
+var dinosaurs = [
+"Тираннозавр",
+"Велоцираптор","Стегозавр", "Трицератопс", "Брахиозавр", "Птеранодон", "Апатозавра", "Диплодок", "Компсогнат"];
+undefined
+
+Доступ к элементам массива
+
+dinosaurs[0];
+'Тираннозавр'
+dinosaurs[3];
+'Трицератопс'
+
+Создание и изменение элементов
+\var dinosaurs = [
+"Тираннозавр",
+"Велоцираптор",
+"Стегозавр",
+"Трицератопс",
+"Брахиозавр",
+"Птеранодон",
+"Апатозавра",
+"Диплодок",
+"Компсогнат"];
+dinosaurs
+(9) ['Тираннозавр', 'Велоцираптор', 'Стегозавр', 'Трицератопс', 'Брахиозавр', 'Птеранодон', 'Апатозавра', 'Диплодок', 'Компсогнат']
+dinosaurs[0];
+'Тираннозавр'
+dinosaurs[3];
+'Трицератопс'
+dinosaurs[0] = "Тираннозавр рекс";
+'Тираннозавр рекс'
+dinosaurs
+(9) ['Тираннозавр рекс', 'Велоцираптор', 'Стегозавр', 'Трицератопс', 'Брахиозавр', 'Птеранодон', 'Апатозавра', 'Диплодок', 'Компсогнат']
+var dinosaurs = [];
+dinosaurs[0] = "Тираннозавр";
+dinosaurs[1] = "Велоцираптор";
+'Велоцираптор'
+dinosaurs
+(2) ['Тираннозавр', 'Велоцираптор']
+animals
+(5) ['Monkey', 'cat', 'cat', 'dog', 'Лама']
+animals
+(5) ['Monkey', 'cat', 'cat', 'dog', 'Лама']
+animals.unshift("White Bear");
+6
+animals[0];
+'White Bear'
+animals[2];
+'cat'
+animals.length
+6
+animals.pop();
+'Лама'
+animals.length
+5
+animals.push("Лама");
+6
+var lastAnimal = animals.pop()
+undefined
+lastAnimal
+'Лама'
+animals
+(5) ['White Bear', 'Monkey', 'cat', 'cat', 'dog']
+animals.pop();
+'dog'
+animals
+(4) ['White Bear', 'Monkey', 'cat', 'cat']
+animals.unshift(lastAnimal);
+5
+animals
+(5) ['Лама', 'White Bear', 'Monkey', 'cat', 'cat']
+animals
+(5) ['Лама', 'White Bear', 'Monkey', 'cat', 'cat']
+animals.pop()
+'cat'
+animals
+(4) ['Лама', 'White Bear', 'Monkey', 'cat']
+var firstAnimal = animals.shift();
+undefined
+firstAnimal
+'Лама'
+animals
+(3) ['White Bear', 'Monkey', 'cat']
+
+Объединение массивов
+
+
+var furryAnimals = ["Alpaka", "Кольцехвостный лемур", "Йети"];
+var scalyAnimals = ["Удав", "Годзилла"];
+var furryAndScalyAnimals = furryAnimals.concat(scalyAnimals);
+furryAndScalyAnimals;
+(5) ['Alpaka', 'Кольцехвостный лемур', 'Йети', 'Удав', 'Годзилла']
+furryAnimals
+(3) ['Alpaka', 'Кольцехвостный лемур', 'Йети']
+scalyAnimals
+(2) ['Удав', 'Годзилла']
+var featheredAnimals = ["Ара", "Додо"];
+var allAnimals = furryAnimals.concat(scalyAnimals, featheredAnimals);
+undefined
+allAnimals
+(7) ['Alpaka', 'Кольцехвостный лемур', 'Йети', 'Удав', 'Годзилла', 'Ара', 'Додо']
+var colors = ["red", "green", "blue"];
+colors.indexOf("blue");
+2
+colors.indexOf("green");
+1
+
+colors.indexOf("green");
+1
+colors[2];
+'blue'
+colors.indexOf("blue");
+2
+colors.indexOf("фиолетовый");
+-1
+var insects = ["Пчела", "Муравей", "Пчела", "Пчела", "Муравей"];
+insects.indexOf("Пчела");
+
+var boringAnimals = ["Monkey", "Cat", "Fish", "Lizard"];
+boringAnimals
+(4) ['Monkey', 'Cat', 'Fish', 'Lizard']
+boringAnimals.join
+ƒ join() { [native code] }
+boringAnimals.join()
+'Monkey,Cat,Fish,Lizard'
+boringAnimals.join(" - ");
+'Monkey - Cat - Fish - Lizard'
+boringAnimals.join("*")
+'Monkey*Cat*Fish*Lizard'
+boringAnimals.join(" and ")
+'Monkey and Cat and Fish and Lizard'
+
+var myNames = ["Николас", "Эндрю", "Максвелл", "Морган"];
+myNames.join(" ");
+'Николас Эндрю Максвелл Морган'
+myNames[0] + myNames[1] + myNames[2] + myNames[3];
+'НиколасЭндрюМаксвеллМорган'
+var ages = [11, 14, 79];
+ages.join(" ");
+'11 14 79'
+var landmarks = [];
+landmarks.push("Мой дом");
+landmarks.push("Дорожка к дому");
+landmarks.push("Мигающий фонарь");
+landmarks.push("Протекающий гидрант");
+landmarks.push("Пожарная станция");
+landmarks.push("Приют для кошек");
+landmarks.push("Моя бывшая школа");
+landmarks.push("Дом подруги");
+landmarks
+(8) ['Мой дом', 'Дорожка к дому', 'Мигающий фонарь', 'Протекающий гидрант', 'Пожарная станция', 'Приют для кошек', 'Моя бывшая школа', 'Дом подруги']0: "Мой дом"1: "Дорожка к дому"2: "Мигающий фонарь"3: "Протекающий гидрант"4: "Пожарная станция"5: "Приют для кошек"6: "Моя бывшая школа"7: "Дом подруги"length: 8[[Prototype]]: Array(0)
+landmarks.pop();
+'Дом подруги'
+landmarks.pop();
+'Моя бывшая школа'
+landmarks.pop();
+'Приют для кошек'
+landmarks.pop();
+'Пожарная станция'
+landmarks.pop();
+'Протекающий гидрант'
+landmarks.pop();
+'Мигающий фонарь'
+landmarks.pop();
+'Дорожка к дому'
+landmarks.pop();
+'Мой дом'
+
+Случайный выбор
+
+Math.random();
+0.23275398337600794
+Math.random();
+0.6161275440354856
+Math.random(0) * 10;
+0.4160769867636782
+Math.random() * 10;
+7.40333815386367
+Math.random() * 10;
+3.5911094248629216
+Math.floor(3.746);
+3
+Math.floor(9.9999);
+9
+Math.floor(Math.random() * 4);
+3
+var randomWards = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+
+var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+'Принцесса'
+var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+'Взрыв'
+var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+'Пещера'
+var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+'Пещера'
+var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+var randomIndex = Math.floor(Math.random() * 4)
+randomWords[randomIndex];
+'Взрыв'
+randomWords[Math.floor(Math.random() * 4)];
+'Взрыв'
+randomWords[Math.floor(Math.random() * 4)];
+'Принцесса'
+randomWords[Math.floor(Math.random() * 4)];
+'Взрыв'
+randomWords[Math.floor(Math.random() * 4)];
+'Взрыв'
+randomWords[Math.floor(Math.random() * 4)];
+'Взрыв'
+randomWords[Math.floor(Math.random() * 4)];
+'Карандаш'
+randomWords[Math.floor(Math.random() * 4)];
+'Взрыв'
+var phrases = [
+"Звучит неплохо",
+"Да, это определенно надо сделать",
+"Не думаю, что это хорошая идея",
+"Может не сегодня?",
+"Компьютер говорит нет",
+"Мне выпить еще молочного коктейля?"
+];
+phrases[Math.floor(Math.random() * 6)];
+'Компьютер говорит нет'
+
+
+var randomBodyParts = ["глаз", "нос", "череп"];
+var randomAdjectives =  ["вонючая", "унылая", "дурацкая"];
+var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+// Выбор случайной части тела из массива randomBodyParts:
+var randomBodyPart = randomBodyParts[Math.floor(Math.random() * 3)];
+// Выбор случайного прилагательного из массива randomAdjectives:
+randomAdjective = randomAdjectives[Math.floor(Math.random() * 3)];
+ // Выбор случайного слова из массива randomWords:
+var randomWord = randomWords[Math.floor(Math.random() * 5)];
+// Соединяем случайные строки в предложение:
+var randomInsult = "У тебя " + randomBodyPart + " словно " + randomAdjective + " " + randomWord + "!!!";
+randomInsult;
+
+var randomBodyParts = ["глаз", "нос", "череп"];
+var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+var randomBodyPart = randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)];
+var randomAdjective = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)];
+var randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
+var randomInsult = ["У тебя", randomBodyPart, "словно",
+randomAdjective, randomWord + "!!!"].join(" ");
+randomInsult
+'У тебя череп словно дурацкая мартышка!!!'
+
+var bodyParts = ["пися", "глаз", "попа"];
+var adjectives = ["странная", "невкусная", "жестная", "вонючая"];
+var animalParts = ["ласты", "хвост", "крылья", "чешуя"];
+var animals = ["муха", "выдра", "коза", "мартышка", "крыса"];
+
+var finalBodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+var finalAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+var finalAnimalPart = animalParts[Math.floor(Math.random() * animalParts.length)];
+var finalAnimal = animals[Math.floor(Math.random() * animals.length)];
+
+var randomInsult = ["У тебя", finalBodyPart, "еще более", finalAdjective, "чем", finalAnimalPart, "у", finalAnimal].join(" ");
+randomInsult;
+'У тебя пися еще более жестная чем крылья у выдра'
+var array[3, 2, 1];
+var array2 = array.join("больше");
+var array = [3, 2, 1];
+var array2 = array.join("больше, чем");
+var array2
+undefined
+array
+(3) [3, 2, 1]
+array.join(" больше, чем ");
+'3 больше, чем 2 больше, чем 1'

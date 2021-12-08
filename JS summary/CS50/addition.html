@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="httms://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="httms://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="httms://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Counter_React</title>
+</head>
+<body>
+    <script type="text/babel">
+    <div id="app"></div>
+
+        function App() {
+            // const [num1, setNum1] = React.useState(1)
+            // const [num2, setNum2] = React.useState(2)
+            const [state] = React.useState({
+                num1: 1,
+                num2: 2
+            })
+            return (
+                <div>
+                    <div>1 + 2</div>
+                    <input />
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+О Б Ъ Е К Т Н О
+О Р И Е Н Т И Р О В А Н Н О Е 
+ПРОГРАММИРОВАНИЕ
+
+
+let dog = {
+    name: "Оладушек",
+    legs: 4,
+    isAwesome: true
+};
+undefined
+dog.name
+'Оладушек'
+dog.age = 6
+6
+dog.bark = function () {
+    console.log("Гав-гав! Меня зовут " + this.name + "!");
+};
+dog.bark();
+VM2661:2 Гав-гав! Меня зовут Оладушек!
+undefined
+
+dog.bark = function () {
+    console.log("Гав-гав! Меня зовут " + this.name + "!");
+};
+dog.bark();
+VM2661:2 Гав-гав! Меня зовут Оладушек!
+undefined
+let speak = function () {
+    console.log(this.sound + "!Меня зовут " + this.name + "!");
+};
+undefined
+S
+let cat = {
+    sound: "Мяу",
+    name: "Варежка",
+    speak: speak
+};
+undefined
+cat.speak();
+VM2916:2 Мяу!Меня зовут Варежка!
+undefined
+let pig = {
+    sound: "Хрю",
+    name: "Чарли",
+    speak: speak
+};
+let horse = {
+ sound: "И-го-го",
+ name: "Мэри",
+ speak: speak
+};
+pig.speak();
+VM2916:2 Хрю!Меня зовут Чарли!
+undefined
+horse.speak();
+VM2916:2 И-го-го!Меня зовут Мэри!
+undefined

@@ -1,0 +1,11 @@
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (50 >= val && val >= 25)
+      return "Yes";
+
+  // Only change code above this line
+  return "No";
+}
+
+testLogicalAnd(10);

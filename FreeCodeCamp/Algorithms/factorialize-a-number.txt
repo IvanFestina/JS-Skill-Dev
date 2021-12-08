@@ -1,0 +1,10 @@
+function factorialize(num) {
+ let mul = 1
+ for (var i = 1; i <= num; i++) {
+    mul *= i;
+ }
+  return mul;
+}
+
+factorialize(5);
+console.log(factorialize(5))

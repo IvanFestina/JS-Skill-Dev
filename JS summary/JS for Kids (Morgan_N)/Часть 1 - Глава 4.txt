@@ -1,0 +1,138 @@
+Объекты
+
+var cat = {
+    "legs": 3,
+    "name": "Гармония",
+    "color": "Черепаховый"
+};
+undefined
+var cat = {
+ legs: 3,
+ name: "Гармония",
+ color: "Черепаховый"
+};
+undefined
+var cat = {
+    legs: 3,
+    "full name": "Гармония Филомена Уси-Пусечка Морган",
+    color: "Черепаховый"
+};
+undefined
+cat["name"];
+undefined
+var cat = { legs: 3, name: "Гармония", color: "Черепаховый" };
+cat["name"];
+'Гармония'
+cat["legs"]
+3
+cat.name
+'Гармония'
+cat.legs
+3
+
+var dog = {name: "Оладушек", age: 6, color: "белый", bark: "Гав тяф тяф!"};
+var cat = {
+    name: "Гармония", age: 8, color: "Черепаховый"
+};
+cat
+{name: 'Гармония', age: 8, color: 'Черепаховый'}
+Object.keys(dog);
+(4) ['name', 'age', 'color', 'bark']
+Object.keys(cat);
+(3) ['name', 'age', 'color']
+
+
+var object= {};
+undefined
+var cat = {};
+undefined
+cat["legs"] = 3;
+cat["name"] = "Гармония";
+cat["color"] = "Черепаховый";
+cat
+{legs: 3, name: 'Гармония', color: 'Черепаховый'}
+var cat = {};
+undefined
+cat.legs = 3;
+3
+cat.name = "Хаос";
+cat.color = "черный";
+'черный'
+cat
+{legs: 3, name: 'Хаос', color: 'черный'}
+
+
+dog.isBrown
+undefined
+var dinosaurs = []
+undefined
+var dinosaurs = [
+    { name: "Тираннозавр рекс", perion: "Верхнемеловой" },
+];
+undefined
+var dinosaurs = [
+    { name: "Тираннозавр рекс", perion: "Верхнемеловой" },
+    { name: "Стегозавр", period: "Верхнеюрский" },
+    { name: "Платеозавр", period: "Триасовый" }
+];
+undefined
+dinosaurs
+(3) [{…}, {…}, {…}]0: {name: 'Тираннозавр рекс', perion: 'Верхнемеловой'}1: {name: 'Стегозавр', period: 'Верхнеюрский'}2: {name: 'Платеозавр', period: 'Триасовый'}length: 3[[Prototype]]: Array(0)
+dinosaurs[0];
+{name: 'Тираннозавр рекс', perion: 'Верхнемеловой'}
+dinosaurs[3]
+undefined
+dinosaurs[2];
+{name: 'Платеозавр', period: 'Триасовый'}
+dinosaurs[2] ["name"];
+'Платеозавр'
+dinosaurs[1].period
+'Верхнеюрский'
+
+
+var anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16]};
+undefined
+anna
+{name: 'Анна', age: 11, luckyNumbers: Array(4)}
+var dave = { name: "Дэйв", age: 5, luckyNumbers: [3, 9, 40]};
+undefined
+dave
+{name: 'Дэйв', age: 5, luckyNumbers: Array(3)}
+var kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3] };
+
+undefined
+kate
+{name: 'Кейт', age: 9, luckyNumbers: Array(3)}
+var friends = [anna, dave, kate];
+
+undefined
+friends
+(3) [{…}, {…}, {…}]0: {name: 'Анна', age: 11, luckyNumbers: Array(4)}1: {name: 'Дэйв', age: 5, luckyNumbers: Array(3)}2: {name: 'Кейт', age: 9, luckyNumbers: Array(3)}length: 3[[Prototype]]: Array(0)
+friends[1];
+{name: 'Дэйв', age: 5, luckyNumbers: Array(3)}age: 5luckyNumbers: (3) [3, 9, 40]name: "Дэйв"
+friends[2].name
+'Кейт'
+friends[0].luckyNumbers[0]
+2
+friends
+(3) [{…}, {…}, {…}]0: {name: 'Анна', age: 11, luckyNumbers: Array(4)}age: 11luckyNumbers: (4) [2, 4, 8, 16]name: "Анна"[[Prototype]]: Object1: {name: 'Дэйв', age: 5, luckyNumbers: Array(3)}2: {name: 'Кейт', age: 9, luckyNumbers: Array(3)}age: 9luckyNumbers: (3) [1, 2, 3]name: "Кейт"[[Prototype]]: Objectlength: 3[[Prototype]]: Array(0)
+var owedMoney = {};
+undefined
+
+
+Object.keys(movies);
+(4) ['In search of Nemo', 'Звездные войны: Эпизод VI - Возвращение джедая', 'Гарри Поттер и Кубок огня', 'Тачки']0: "In search of Nemo"1: "Звездные войны: Эпизод VI - Возвращение джедая"2: "Гарри Поттер и Кубок огня"3: "Тачки"length: 4[[Prototype]]: Array(0)
+movies[0],["In search of Nemo"]
+['In search of Nemo']0: "In search of Nemo"length: 1[[Prototype]]: Array(0)
+
+
+var myCrazyObject = {
+"name": "Нелепый объект",
+"some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+"random animal": "Банановая акула"
+};
+undefined
+
+myCrazyObject["some array"][2].number
+
+123

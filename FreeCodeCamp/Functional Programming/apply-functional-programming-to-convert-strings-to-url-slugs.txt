@@ -1,0 +1,14 @@
+// Only change code below this line
+function urlSlug(title) {
+
+let titleCopy = title.slice().
+toLowerCase().
+split(" ").
+filter(word => {return word !== ""}).
+join('-')
+
+return titleCopy
+}
+// Only change code above this line
+
+console.log(urlSlug(" Winter Is  Coming"))

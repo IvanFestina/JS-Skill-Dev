@@ -1,0 +1,150 @@
+Цепочка из конструкций if... else
+
+var lemonChicken = false;
+var beefWithBlackBean = true;
+var sweetAndSourPork = true;
+
+if (lemonChicken) {
+    console.log("Отлично! Я буду курицу с лимоном");
+} else if (beefWithBlackBean) { 
+  console.log("Заказываю говядину.");
+} else if (sweetAndSourPork) {
+ console.log("Ладно, закажу свинину.");
+} else {
+    console.log("Что ж, остается рис с яйцом.");
+}
+VM23224:8 Заказываю говядину.
+
+
+var lemonChicken = false;
+var beefWithBlackBean = false;
+var sweetAndSourPork = false;
+if (lemonChicken) {
+ console.log("Отлично! Я буду курицу с лимоном!");
+} else if (beefWithBlackBean) {
+ console.log("Заказываю говядину.");
+} else if (sweetAndSourPork) {
+ console.log("Ладно, закажу свинину.");
+} 
+
+
+name = "Саша"
+'Саша'
+if (name === "ivan") {
+  console.log("Привет мне!");
+} else if (name === "Саша") {
+  console.log("Привет папа!");
+} else if (name === "Таня") {
+  console.log("Привет мама!");
+}  else if (name !== "ivan") {
+ console.log("Привет незнакомец!");
+
+
+var sheepCounted = 0;
+while (sheepCounted < 10) {
+console.log("Посчитано овец: " + sheepCounted + "!");
+   sheepCounted++;
+}
+console.log("Хрррррр-псссс"); 
+VM834:3 Посчитано овец: 0!
+VM834:3 Посчитано овец: 1!
+VM834:3 Посчитано овец: 2!
+VM834:3 Посчитано овец: 3!
+VM834:3 Посчитано овец: 4!
+VM834:3 Посчитано овец: 5!
+VM834:3 Посчитано овец: 6!
+VM834:3 Посчитано овец: 7!
+VM834:3 Посчитано овец: 8!
+VM834:3 Посчитано овец: 9!
+VM834:6 Хрррррр-псссс
+undefined
+
+
+
+
+var name = "Ник";
+for (var i = 0; i < name.length; i++) {
+ console.log("В моем имени есть буква " + name[i] + ".");
+}
+VM1868:3 В моем имени есть буква Н.
+VM1868:3 В моем имени есть буква и.
+VM1868:3 В моем имени есть буква к.
+undefined
+var name = "Ник";
+for (var i = 0; i < name.lenght; i++) {
+  console.log("В моем имени есть буква " + name[i] + ".");
+}
+undefined
+var name = "Ник";
+for (var i = 0; i < name.lenght; i++) {
+  console.log("В моем имени есть буква " + name[i] + ".");
+}
+undefined
+var name = "NIK";
+for (var  i = 0; i < name.length; i++) {
+    console.log("In my name there is a character " + name[i] + ".");
+}
+VM2240:3 In my name there is a character N.
+VM2240:3 In my name there is a character I.
+VM2240:3 In my name there is a character K.
+undefined
+
+var degre3 = 1
+while (degre3 < 10000) {
+console.log(degre3);
+ degre3 = degre3 * 3
+}
+
+VM2620:3 1
+VM2620:3 3
+VM2620:3 9
+VM2620:3 27
+VM2620:3 81
+VM2620:3 243
+VM2620:3 729
+VM2620:3 2187
+VM2620:3 6561
+19683
+
+var animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+animals[0] += " - прекрасное животное";
+animals[1] += " - прекрасное животное";
+animals[2] += " - прекрасное животное";
+animals[3] += " - прекрасное животное";
+'Комодский варан - прекрасное животное'
+animals
+(4) ['Кот - прекрасное животное', 'Рыба - прекрасное животное', 'Лемур - прекрасное животное', 'Комодский варан - прекрасное животное']0: "Кот - прекрасное животное"1: "Рыба - прекрасное животное"2: "Лемур - прекрасное животное"3: "Комодский варан - прекрасное животное"length: 4[[Prototype]]: Array(0)
+
+var abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        var rs = "";
+        while (rs.length < 6) {
+            rs += abc[Math.floor(Math.random() * abc.length)];
+        }
+        console.log(rs);
+VM5025:6 щгпкжн
+undefined
+var alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+var rs = "";
+var Letter = alphabet[Math.floor(Math.random() * alphabet.length)];
+        while (rs.length < 6) {
+            rs += Letter;
+        }
+        console.log(rs);
+VM5152:7 нннннн
+
+
+var input = "javascript is awesome";
+var output = "";
+for (let i = 0; i<input.length; i++) {
+  let symbol = input[i]
+  switch (symbol) {
+    case 'a': output += '4'; break;
+    case 'e': output += '3'; break;
+    case 'i': output += '1'; break;
+    case 'o': output += '0'; break;
+    case 't': output += '7'; break;
+    default: output += symbol;
+  }
+}
+console.log(output)
+VM5706:14 j4v4scr1p7 1s 4w3s0m3

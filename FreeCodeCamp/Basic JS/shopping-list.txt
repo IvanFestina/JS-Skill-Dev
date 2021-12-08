@@ -1,0 +1,1 @@
+var myList = [["Cat", 5], ["bad", 5], ["red", 3], ["shirt", 124], ["creep", 353]];

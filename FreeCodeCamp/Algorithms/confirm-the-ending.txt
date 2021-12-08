@@ -1,0 +1,11 @@
+function confirmEnding(str, target) {
+let targetLength = target.length;
+let targetToMatch = str.slice(str.length - targetLength, str.length)
+if (target == targetToMatch) {
+  return true
+} else {
+  return false
+}
+}
+
+confirmEnding("Open sesame", "same");

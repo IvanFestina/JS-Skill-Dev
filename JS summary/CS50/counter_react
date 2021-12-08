@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="httms://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="httms://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="httms://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Counter_React</title>
+</head>
+<body>
+    <script type="text/babel">
+    <div id="app"></div>
+
+        function App() {
+
+            const [count, setCount] = React.useState(0);
+
+            function updateCount() {
+             setCount(count + 1);
+            }
+
+            return (
+                <div>
+                   <div>{count}}</div>
+                   <button onClick={updateCount}>Count</button>
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+</body>
+</html>

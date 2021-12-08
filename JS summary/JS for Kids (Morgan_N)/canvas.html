@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Canvas</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+
+ <script>
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+/*for (let i = 0; i < 8; i++) {
+ctx.fillRect(i * 10, i * 10, 15, 15);
+};*/
+ctx.fillStyle = "Purple"
+ctx.fillRect(200, 200, 50, 50);
+ctx.fillRect(221, 250, 10, 40);
+ctx.fillRect(185, 280, 80, 80);
+ctx.fillRect(145, 270, 160, 10);
+ctx.fillRect(200, 360, 10, 50);
+ctx.fillRect(240, 360, 10, 50);
+/*
+ctx.fillStyle = "Red"
+ctx.fillRect(10, 10, 50, 100);
+ctx.fillStyle = "Green"
+ctx.fillRect(60, 10, 50, 100);
+ctx.fillStyle = "Blue"
+ctx.fillRect(110, 10, 50, 100);
+ctx.strokeStyle = "DeepPink";
+ctx.lineWidth = 4;
+ctx.strokeRect(200, 10, 50, 100);
+
+ctx.strokeStyle = "Turquoise";
+ctx.lineWidth = 4;
+ctx.beginPath();
+ctx.moveTo(30, 30);
+ctx.lineTo(80, 80);
+ctx.moveTo(80, 30);
+ctx.lineTo(30, 80);
+ctx.stroke();
+
+ctx.fillStyle = "Blue";
+ctx.beginPath();
+ctx.moveTo(100, 100);
+ctx.lineTo(100, 60);
+ctx.lineTo(130, 30)
+
+ctx.fillStyle = "Blue";
+ctx.beginPath();
+ctx.moveTo(100, 100);
+ctx.lineTo(100, 60);
+ctx.lineTo(130, 30);
+ctx.lineTo(160, 60);
+ctx.lineTo(160, 100);
+ctx.lineTo(100, 100);
+ctx.fill(); */
+
+ctx.lineWidth = 2;
+ctx.strokeStyle = "Green";
+ctx.beginPath();
+ ctx.arc(50, 50, 20, 0, Math.PI / 2, false);
+ctx.stroke();
+ctx.beginPath();
+ ctx.arc(100, 50, 20, 0, Math.PI, false);
+ctx.stroke();
+ctx.beginPath();
+ ctx.arc(150, 50, 20, 0, Math.PI * 2, false);
+ctx.stroke();
+
+let circle = (x, y, radius) => {
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+  ctx.stroke();
+}
+
+
+
+ctx.lineWidth = 4;
+ctx.strokeStyle = "Red";
+circle(100,100,10);
+ctx.strokeStyle = "Orange";
+circle(100, 100, 20);
+ctx.strokeStyle = "Yellow";
+circle(100, 100, 30);
+ctx.strokeStyle = "Green";
+circle(100, 100, 40);
+ctx.strokeStyle = "Blue";
+circle(100, 100, 50);
+ctx.strokeStyle = "Purple";
+circle(100, 100, 60);
+
+
+</script>
+</body>
+</html>

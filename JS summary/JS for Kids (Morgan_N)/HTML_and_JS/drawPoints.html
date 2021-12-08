@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Точки</title>
+</head>
+<body>
+<canvas id="canvas" width="200" height="200"></canvas>
+
+    <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var drawPoints = function (points) {
+      ctx.beginPath();
+      ctx.moveTo(points[0][0], points[0][1]);
+      for (var i = 1; i < points.length; i++) {
+        ctx.lineTo(points[i][0], points[i][1]);
+      }
+      ctx.stroke();
+    };
+    points = [[50, 50], [50, 100], [100, 100], [100, 50], [50, 50]];
+    var mysteryPoints = [[50, 50], [50, 100], [25, 120], [100, 50], [70, 90], [100, 90], [70, 120]];
+    drawPoints(points);
+</script>
+  
+</body>
+</html>

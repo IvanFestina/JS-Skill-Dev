@@ -1,0 +1,265 @@
+// Рисуем столько котиков, сколько захотим!
+var drawCats = function (howManyTimes) {
+ for (var i = 0; i < howManyTimes; i++) {
+ console.log(i + " =^.^=");
+ }
+};
+drawCats(100);
+
+
+
+99 * 123
+12177
+
+"Вот длинная строка".slice(0, 3);
+'Вот'
+
+true && false
+false
+
+15 + 9 * 2
+33
+(15 + 9) * 2
+48
+
+var nick;
+undefined
+
+var age = 12
+undefined
+
+age
+12
+
+age = 13
+13
+
+var numberOfSibliings = 1+3;
+undefined
+var numberOfSiblings = 1 + 3;
+var numberOfCandies = 8;
+numberOfCandies / numberOfSiblings;
+2
+
+var secondsInAMinute = 60;
+var minutesInAHour = 60;
+var secondsInAHour = secondsInAMinute * minutesInAHour;
+secondsInAHour;
+3600
+
+var hoursInADay = 24;
+var secondsInADay = secondsInAHour * hoursInADay;
+secondsInADay
+86400
+
+var daysInAYear = 365;
+var secondsInAYear = secondsInADay * daysInAYear;
+secondsInAYear;
+31536000
+
+var age = 29;
+age * secondsInAYear;
+914544000
+
+Инкремент и декремент
+
+
+var highFives = 0;
+++highFives;
+
+1
+++highFives;
+2
+--highFives;
+1
+
+highFives = 0;
+highFives++;
+0
+highFives++;
+1
+highFives++;
+2
+
++= (плюс-равно) и –= (минус-равно)
+
+var x = 10;
+x = x + 5;
+x;
+15
+
+var score = 10;
+score += 7;
+17
+score -= 3;
+14
+
+var balloons = 100;
+balloons *= 2;
+200
+var balloons = 100;
+balloons /= 4;
+25
+
+var myThing = 5;
+myThing = "это строка";
+'это строка'
+var numberNine = 9;
+var stringNine = "9";
+undefined
+numberNine + numberNine;
+18
+stringNine + stringNine
+'99'
+var greeting = "Привет";
+var myName = "Ник";
+greeting + myName;
+'ПриветНик'
+var greeting = "Привет, ";
+var myName = "Ник";
+greeting + myName;
+'Привет, Ник'
+
+Получение среза строки
+
+
+var java = "Java";
+java.length;
+4
+var script = "Script";
+script.lenth;
+undefined
+var script = "Script";
+script.length;
+6
+var javascript = java + script;
+javascript.length;
+10
+var javascript = javaa + script;
+javascript.length;
+
+Перевод строки в заглавный или строчный регистр
+
+
+var wrongString = "эй, кАк деЛа?";
+var wrongString = wrongString.toUpperCase();
+var firstCharacter = wrongString[0];
+var lowerString = wrongString.toLowerCase();
+var slicedString = lowerString.slice(1);
+firstLetter + slicedString;
+'Эй, как дела?'
+
+var wrongString = "эй, кАк деЛа?";
+wrongString[0].toUpperCase() + wrongString.slice(1).toLowerCase();
+'Эй, как дела?'
+
+Булевы значения
+
+var javascriptIsCool = true;
+javascriptIsCool
+true
+
+var hadShower = true;
+var hasBackpack = false;
+hadShower && hasBackpack;
+false
+
+var hadShower = true;
+var hasBackpack = true;
+hadShower && hasBackpack;
+true
+
+var hasApple = true;
+var hasOrange = false;
+hasApple || hasOrange;
+true
+
+var isWeekend = true;
+var needToShowerToday = !isWeekend;
+needToShowerToday;
+false
+
+needToShowerToday;
+!needToShowerToday;
+true
+
+Совмещение логических операторов
+
+var isWeekend = false;
+var hadShower = true;
+var hasApple = false;
+var hasOrange = true;
+var shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
+shouldGoToSchool
+true
+
+Сравнение чисел с помощью булевых значений
+
+var heigth = 155;
+var heigthRestriction = 150;
+
+undefined
+var heigth = 155;
+var heigthRestriction = 150;
+
+undefined
+var heigth = 155;
+var heigthRestriction = 150;
+heigth > heigthRestriction;
+true
+var heigth = 155;
+var heigthRestriction = 150;
+heigth >= heigthRestriction;
+true
+var heigth = 155;
+var heigthRestriction = 120;
+heigth < heigthRestriction;
+false
+var heigth = 1200;
+var heigthRestriction = 120;
+heigth <= heigthRestriction;
+false
+false
+var heigth = 120;
+var heigthRestriction = 120;
+heigth <= heigthRestriction;
+false
+false
+false
+var heigth = 120;
+var heigthRestriction = 120;
+heigth <= heigthRestriction;
+true
+var mySecretNumber = 5;
+var chicoGuess = 3;
+mySecretNumber === chicoGuess;
+
+
+var grouchoGuess = 5;
+mySecretNumber === grouchoGuess;
+true
+var stringNumber = "5";
+var actualNumber = 5;
+stringNumber === actualNumber;
+false
+stringNumber == actualNumber
+true
+
+
+var age = 11;
+var accompanied = true;
+var ageRestriction = 12;
+age >= ageRestriction;
+false
+var age = 12;
+var accompanied = true;
+var ageRestriction = 12;
+age >= ageRestriction;
+true
+var age = 11;
+var accompanied = true;
+var ageRestriction = 12;
+age >= ageRestriction || accompanied
+true
+
+undefined и null

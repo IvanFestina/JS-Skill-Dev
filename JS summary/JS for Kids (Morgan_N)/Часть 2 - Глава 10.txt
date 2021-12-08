@@ -1,0 +1,41 @@
+И Н Т Е РА К Т И В Н О Е 
+ПРОГРАММИРОВАНИЕ
+
+
+
+var timeUp = function () {
+    alert("Время вышло!");
+};
+setTimeout(timeUp, 3000);
+4
+function doHomeworkAlarm() {
+    alert("Эй! Пора делать домашку!");
+};
+undefined
+setTimeout(doHomeworkAlarm, 6000);
+5
+clearTimeout(setTimeout(doHomeworkAlarm, 1000));
+undefined
+doHomeworkAlarm
+ƒ doHomeworkAlarm() {
+    alert("Эй! Пора делать домашку!");
+}
+setTimeout(doHomeworkAlarm, 1000)
+    
+7
+doHomeworkAlarm
+ƒ doHomeworkAlarm() {
+    alert("Эй! Пора делать домашку!");
+}
+clearTimeout(setTimeout(doHomeworkAlarm, 60000));
+undefined
+var = timeoutId = setTimeout(doHomeworkAlarm, 1000)
+    
+
+
+var intervalId = setInterval(printMessage, 1000);
+undefined
+VM1849:2 Ты не смотришь в консоль уже 1 сек
+
+clearInterval(intervalId);
+undefined

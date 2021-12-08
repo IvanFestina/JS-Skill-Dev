@@ -1,0 +1,10 @@
+function chunkArrayInGroups(arr, size) {
+let twoDimArr = [];
+
+for (let i = 0; i <arr.length; i += size) {
+  twoDimArr.push(arr.slice(i, i + size))
+}
+return twoDimArr
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
