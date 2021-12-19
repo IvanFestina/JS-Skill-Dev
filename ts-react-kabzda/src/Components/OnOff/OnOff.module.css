@@ -1,0 +1,57 @@
+.panel {
+    display: flex;
+    justify-content: center;
+    margin: 5px 5px;
+    flex-wrap: wrap;
+}
+
+.square1 + .square2 + .circle {
+    margin-left: 12px;
+}
+
+.cirGreen {
+    align-self: center;
+    border: 2px solid black;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: greenyellow;
+}
+
+.cirRed {
+    align-self: center;
+    border: 2px solid black;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.sq {
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.sqGreen {
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+
+.sqRed {
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: red;
+}
