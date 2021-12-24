@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import s from './OnOff.module.css'
 // type LightsType = {lights: boolean}
 
-export const OnOff = (props: any) => {
+export const UncontrolledOnOff = (props: any) => {
 
     let [lights, setLights] = useState<boolean>(true)
 

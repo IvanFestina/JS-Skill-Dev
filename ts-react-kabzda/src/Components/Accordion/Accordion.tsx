@@ -1,22 +1,35 @@
 import React from "react";
+import {MouseEvent} from 'react'
 
 type AccordionPropsType = {
     titleValue: string
+    onClickCallback: () => void
     collapsed: boolean
 }
-type AccordionTitlePropsType = {title: string}
+type AccordionTitlePropsType = {
+    titleValue: string
+     onClickCallback: () => void
+}
 
 export function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendering")
     return <div>
-        <AccordionTitle title={props.titleValue} />
-        {!props.collapsed && <AccordionBody />}
+        <AccordionTitle titleValue={props.titleValue}
+                        onClickCallback={props.onClickCallback}
+                        />
+        {!props.collapsed && <AccordionBody/>}
     </div>
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     console.log("AccordionTitle rendering")
-    return <h3> {props.title} </h3>
+
+    // const onClickTitleHandler = (event: MouseEvent<HTMLHeadingElement>) => {
+    //     props.setAccordionCollapsed(!props.collapsed)
+    // }
+    return <h3 onClick={props.onClickCallback}>
+        {props.titleValue}
+    </h3>
 }
 
 function AccordionBody(props: any) {

@@ -1,26 +1,38 @@
-import React from 'react';
-import './App.css';
+import React, {useState} from 'react';
+import s from './App.module.css';
 import {Accordion} from "./Components/Accordion/Accordion";
-import {Rating} from "./Components/Rating/Rating";
-import {OnOff} from "./Components/OnOff/OnOff";
-import { UncontrolledAccordion } from './Components/UnAccordion/UnControlledAccordion';
+import {Rating, RatingValueType} from "./Components/Rating/Rating";
+import {UncontrolledAccordion} from './Components/UnAccordion/UnControlledAccordion';
 import {UncontrolledRating} from "./Components/uncontrolledRating/UncontrolledRating";
+import {OnOff} from "./Components/OnOff/OnOff";
 
 function App() {
     console.log("App rendering")
+
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
+    const [lights, setLights] = useState<boolean>(true)
+
+
     return (
-        <div>
+        <div className={s.App}>
             <PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
-            <UncontrolledAccordion titleValue={"Menu"}/>
-            <UncontrolledAccordion titleValue={"Users"}/>
-            <UncontrolledRating />
-            <OnOff />
+            <Accordion titleValue={"Menu"}
+                       onClickCallback={() => setAccordionCollapsed(!accordionCollapsed)}
+                       collapsed={accordionCollapsed}/>
+            {/*<UncontrolledAccordion titleValue={"Menu"}/>*/}
+            <Rating value={ratingValue}
+                    onClick={setRatingValue}/>
+            <UncontrolledRating/>
+            <OnOff lights={lights}
+                   setLights={setLights}/>
+            {/*<UncontrolledOnOff />*/}
+
         </div>
     );
 }
-            {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
-            {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
+
 type PageTitlePropsType = { title: string }
 
 function PageTitle(props: PageTitlePropsType) {
