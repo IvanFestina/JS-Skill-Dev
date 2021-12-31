@@ -1,14 +1,14 @@
 import React from "react";
 import {MouseEvent} from 'react'
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string
     onClickCallback: () => void
     collapsed: boolean
 }
 type AccordionTitlePropsType = {
     titleValue: string
-     onClickCallback: () => void
+    onClickCallback: () => void
 }
 
 export function Accordion(props: AccordionPropsType) {
@@ -27,7 +27,7 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     // const onClickTitleHandler = (event: MouseEvent<HTMLHeadingElement>) => {
     //     props.setAccordionCollapsed(!props.collapsed)
     // }
-    return <h3 onClick={props.onClickCallback}>
+    return <h3 onClick={(e) => props.onClickCallback()}>
         {props.titleValue}
     </h3>
 }

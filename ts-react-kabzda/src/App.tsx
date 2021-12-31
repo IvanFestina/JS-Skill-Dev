@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import s from './App.module.css';
 import {Accordion} from "./Components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./Components/Rating/Rating";
-import {UncontrolledAccordion} from './Components/UnAccordion/UnControlledAccordion';
-import {UncontrolledRating} from "./Components/uncontrolledRating/UncontrolledRating";
+import {UncontrolledAccordion} from './Components/UncontrolledAccordion/UnControlledAccordion';
+import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import {OnOff} from "./Components/OnOff/OnOff";
+import {UncontrolledOnOff} from "./Components/OnOff/UncontrolledOnOff";
 
 function App() {
     console.log("App rendering")
@@ -24,10 +25,10 @@ function App() {
             {/*<UncontrolledAccordion titleValue={"Menu"}/>*/}
             <Rating value={ratingValue}
                     onClick={setRatingValue}/>
-            <UncontrolledRating/>
-            <OnOff lights={lights}
-                   setLights={setLights}/>
-            {/*<UncontrolledOnOff />*/}
+            <UncontrolledRating />
+            {/*<OnOff lights={lights}*/}
+            {/*       setLights={setLights}/>*/}
+            <UncontrolledOnOff onChange={setLights}/> {lights.toString()}
 
         </div>
     );
