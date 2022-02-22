@@ -10,7 +10,6 @@ export const SimpleExample = () => {
     console.log('SimpleExample')
 
     useEffect(() => {
-        debugger
         console.log('useEffect')
         document.title = counter.toString();
     }, [counter])
@@ -33,14 +32,28 @@ export const SetTimeoutExample = () => {
     // }, [counter])
     //каждую секунду обновляй
     useEffect(() => {
+        console.log('tick' + counter)
         setInterval(() => {
             setCounter((state) => state + 1)
         }, 1000)
     }, [])
 
     return <>
-        Hello, counter: {counter} - fake: {fake}
-        {/*<button onClick={() => setFake(fake + 1)}>fake+</button>*/}
-        {/*<button onClick={() => setCounter(counter + 1)}>+</button>*/}
+        Hello, counter: {counter}
+    </>
+}
+
+export const ClockExample = () => {
+    const [date, setDate] = useState<Date>()
+
+    useEffect( () => {
+        setInterval( () => {
+            setDate(new Date())
+        }, 1000)
+    }, [date])
+    const localDate = date?.toLocaleTimeString()
+
+    return <>
+        {localDate}
     </>
 }
