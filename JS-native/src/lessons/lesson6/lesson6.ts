@@ -12,17 +12,81 @@ console.log('Lesson 6');
 // Создать массив из десяти элементов такого типа, упорядочить записи по возрастанию среднего балла.
 // Добавить возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 4 или 5.
 
+
 // Task 02
 // Создать класс с двумя переменными. Добавить конструктор с входными параметрами и инициализирующий члены класса по умолчанию.
 // Можно ли создать метод на экземпляре класса который будет удалять сам экземпляр класса?
 // Можно ли создать метод класса который будет удалять экземпляр класса?
 
+
 // Task 03
 // Составить описание класса для представления времени. Предусмотреть возможности установки времени и изменения его отдельных
-// полей (час, минута, секунда) с проверкой допустимости вводимых значений. В случае недопустимых значений полей выбрасываются исключения.
+
+// полей (час, минута, секунда) с проверкой допустимости вводимых значений. В случае недопустимых значений полей выбрасываются исключения. DONE
 // Создать методы изменения времени на заданное количество часов, минут и секунд.
 // Создать метод выводящий время в строке формата HH:MM:SS
 // Создать класс по вышеуказанному описанию
+
+interface TimeType {
+    hour?: number
+    minute?: number
+    second?: number
+}
+class Time implements TimeType {
+    constructor(public hour: number = 11, public minute: number = 40, public second: number = 12) {
+    }
+    setTime(hour: number, minute: number, second: number) {
+        if (hour > 23 || hour < 0) {
+            throw Error
+        }
+        if (minute > 59 || minute < 0) {
+            throw Error
+        }
+        if (second > 59 || second < 0) {
+            throw Error
+        }
+        this.hour = hour
+        this.minute = minute
+        this.second = second
+
+        // возможности установки времени
+    }
+
+    setHour(hour: number) {
+        if (hour > 23 || hour < 0) {
+            throw Error
+        }
+        this.hour = hour
+    }
+    setMinute(minute: number) {
+        if (minute > 59 || minute < 0) {
+            throw Error
+        }
+        this.minute = minute
+    }
+    setSecond(second: number) {
+        if (second > 59 || second < 0) {
+            throw Error
+        }
+        this.second = second
+    }
+    // calculateTime(num: number) {
+    // this.hour += num
+    // if(this.hour > 23) {
+    // }
+    // }
+    calculateHour(num: number) {
+    this.hour = (this.hour += num) % 24
+    }
+    timeToString() {
+        console.log(`${this.hour}:${this.minute}:${this.second}`)
+    }
+}
+
+const Clock = new Time(23, 12, 13)
+Clock.timeToString()
+console.log(Clock)
+
 
 // Task 04
 // Класс Покупатель: Фамилия, Имя, Адрес, Номер банковского счета;
