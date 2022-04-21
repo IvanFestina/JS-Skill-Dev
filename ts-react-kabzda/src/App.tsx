@@ -5,6 +5,8 @@ import {Rating, RatingValueType} from "./Components/Rating/Rating";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff} from "./Components/OnOff/UncontrolledOnOff";
 import {SelectStyled} from "./Components/Select/SelectStyled";
+import {Clock} from "./Components/clock/clock";
+import {AnalogClock} from "./Components/clock/AnalogClock";
 
 function App() {
     console.log("App rendering")
@@ -29,6 +31,8 @@ function App() {
             {/*<OnOff lights={lights}*/}
             {/*       setLights={setLights}/>*/}
             <UncontrolledOnOff onChange={setLights}/> {lights.toString()}
+
+            <AnalogClock/>
 
         </div>
     );
