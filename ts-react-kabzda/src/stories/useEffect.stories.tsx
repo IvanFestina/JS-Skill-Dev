@@ -57,3 +57,20 @@ export const ClockExample = () => {
         {localDate}
     </>
 }
+
+export const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1)
+    console.log('ResetEffectExample')
+
+      useEffect(() => {
+        console.log('Effect occurred')
+
+        return () => {
+            console.log('Reset occurred')
+        }
+    }, [])
+
+    return <>
+        Hello, counter: {counter} <button onClick={() => { setCounter(counter + 1)}}>+</button>
+    </>
+}
