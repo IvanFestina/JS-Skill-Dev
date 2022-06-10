@@ -46,8 +46,8 @@ export const SetTimeoutExample = () => {
 export const ClockExample = () => {
     const [date, setDate] = useState<Date>()
 
-    useEffect( () => {
-        setInterval( () => {
+    useEffect(() => {
+        setInterval(() => {
             setDate(new Date())
         }, 1000)
     }, [date])
@@ -62,7 +62,7 @@ export const ResetEffectExample = () => {
     const [counter, setCounter] = useState(1)
     console.log('ResetEffectExample')
 
-      useEffect(() => {
+    useEffect(() => {
         console.log('Effect occurred')
 
         return () => {
@@ -71,6 +71,32 @@ export const ResetEffectExample = () => {
     }, [])
 
     return <>
-        Hello, counter: {counter} <button onClick={() => { setCounter(counter + 1)}}>+</button>
+        Hello, counter: {counter}
+        <button onClick={() => {
+            setCounter(counter + 1)
+        }}>+
+        </button>
     </>
+}
+
+export const KeysTrackerExample = () => {
+
+    const [text, setText] = useState('')
+
+    console.log('Component rendered with ' + text)
+
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            console.log(e.key)
+            setText(text + e.key)
+        };
+        window.addEventListener('keypress', handler)
+        return () => {
+            window.removeEventListener('keypress', handler)
+        }
+    }, [text])
+
+    return <div>
+        Typed text: {text}
+    </div>
 }
