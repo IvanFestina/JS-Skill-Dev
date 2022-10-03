@@ -55,6 +55,7 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
                 <ul>
                     {currenciesName.map((currency: string, index: number) => {
                         return (
+                            
                             <li
                                 key={`${index}-${currency}`}
                                 className={`currencies ${currentCurrency === currency ? 'activeCurrency' : null}`}
