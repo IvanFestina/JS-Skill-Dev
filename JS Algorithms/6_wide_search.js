@@ -22,17 +22,33 @@ graph.f = ['g']
 //     }
 // }
 
-function breadthSearch(graph, start, end) {
-    let queue = []
-    queue.push(start)
-    while (queue.length > 0) {
-    const current = queue.shift();
-    if(!graph[current]) {
-        graph[current] = []
-    }
-    if(graph[current].includes(end)) return true
-    queue = [...queue, ...graph[current]]
-    }
-}
+// function breadthSearch(graph, start, end) {
+//     let queue = []
+//     queue.push(start)
+//     while (queue.length > 0) {
+//     const current = queue.shift();
+//     if(!graph[current]) {
+//         graph[current] = []
+//     }
+//     if(graph[current].includes(end)) return true
+//     queue = [...queue, ...graph[current]]
+//     }
+// }
+
+// function breadthSearch(graph, start, end) {
+//     let queue = []
+//     queue.push(start)
+//     while(queue.length > 0) {
+//         let current = queue.shift();
+//         if(graph[current].includes(end)) {
+//             return true
+//         }
+//         if(!graph[current]) {
+//             graph[current] = []
+//         }
+//         queue = [...queue, ...graph[current]]
+//     }
+//
+// }
 
 console.log(breadthSearch(graph, 'a', 'g'))
