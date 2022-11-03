@@ -47,18 +47,28 @@ const tree = [
 //     })
 //     return sum
 // }
-const recursive = (tree) => {
+
+// const recursive = (tree) => {
+//     let sum = 0;
+//     tree.forEach(node => {
+//         sum += node.v
+//         if(!node.c) {
+//             return node.v
+//         }
+//         sum += recursive(node.c)
+//     })
+//     return sum
+// }
+
+const recursiveTreeSearch = (tree) => {
     let sum = 0;
     tree.forEach(node => {
         sum += node.v
-        if(!node.c) {
-            return node.v
-        }
-        sum += recursive(node.c)
+        if(!node.c) return node.v
+        sum += recursiveTreeSearch(node.c)
     })
     return sum
 }
-
 
 // const iteration = (tree) => {
 //     if (!tree.length) {
@@ -94,5 +104,5 @@ const iteration = (tree) => {
     })
     return sum
 }
-console.log(recursive(tree))
+console.log(recursiveTreeSearch(tree))
 console.log(iteration(tree))
